@@ -34,6 +34,13 @@ export default {
       }else{
         return this.games
       }
+    },
+    availableGames(state)
+    {
+      return state.games.filter((game) =>
+      {
+        return game.stock > 0
+      })
     }
   }
 }
